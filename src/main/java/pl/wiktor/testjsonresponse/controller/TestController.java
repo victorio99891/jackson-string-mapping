@@ -23,11 +23,15 @@ public class TestController {
         return testSingleChannel.getBody();
     }
 
-
     @GetMapping(path = "all", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Set<JSONModel> getCollection() throws JsonProcessingException {
+    public Set<JSONModel> getDomainCollection() throws JsonProcessingException {
         String jsonSet = Collections.singleton(testSingleChannel.getBody()).toString();
         return new ObjectMapper().readValue(jsonSet, Set.class);
+    }
+
+    @GetMapping(path = "string", produces = MediaType.APPLICATION_JSON_VALUE)
+    public String getStringCollection() {
+        return Collections.singleton(testSingleChannel.getBody()).toString();
     }
 
 
