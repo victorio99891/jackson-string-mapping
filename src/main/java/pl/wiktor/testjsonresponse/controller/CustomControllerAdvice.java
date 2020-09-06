@@ -32,9 +32,6 @@ public class CustomControllerAdvice
             Class<? extends HttpMessageConverter<?>> aClass,
             ServerHttpRequest serverHttpRequest,
             ServerHttpResponse serverHttpResponse) {
-//        if (serverHttpRequest.getURI().getPath().contains("/channel/all")) {
-//
-//        }
-        return null;
+        return stringSet;
     }
 }
