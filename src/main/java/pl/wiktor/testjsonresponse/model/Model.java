@@ -10,6 +10,7 @@ public class Model {
 
     private Long id;
     private String channelName;
+    @JsonRawValue
     private String body;
 
     public Model(Long id, String channelName) {
